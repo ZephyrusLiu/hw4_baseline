@@ -16,6 +16,11 @@ public class ExpenseTrackerModel {
   // This is applying the Observer design pattern.
   // Specifically, this is the Observable class.
 
+  /**
+   * This is unfinished javadoc comments.
+   * 
+   * 
+   */
   public ExpenseTrackerModel() {
     transactions = new ArrayList<Transaction>();
     matchedFilterIndices = new ArrayList<Integer>();
