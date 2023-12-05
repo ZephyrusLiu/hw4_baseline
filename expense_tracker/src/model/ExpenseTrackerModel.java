@@ -4,12 +4,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import javax.swing.table.DefaultTableModel;
+
+import view.ExpenseTrackerTableModel;
+
 public class ExpenseTrackerModel {
 
   // encapsulation - data integrity
   private List<Transaction> transactions;
   private List<Integer> matchedFilterIndices;
+
   private List<ExpenseTrackerModelListener> listeners;
+  private ExpenseTrackerModel model;
 
   // This is applying the Observer design pattern.
   // Specifically, this is the Observable class.
@@ -17,6 +23,8 @@ public class ExpenseTrackerModel {
   public ExpenseTrackerModel() {
     transactions = new ArrayList<Transaction>();
     matchedFilterIndices = new ArrayList<Integer>();
+    listeners = new ArrayList<ExpenseTrackerModelListener>();
+
   }
 
   public void addTransaction(Transaction t) {
@@ -102,7 +110,7 @@ public class ExpenseTrackerModel {
     //
     // TODO
     for (ExpenseTrackerModelListener listener : listeners) {
-      System.out.println("State changed in ExpenseTrackerModel. Updating...");
+      listener.update(model);
     }
   }
 }
