@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import javax.swing.table.DefaultTableModel;
-
-import view.ExpenseTrackerTableModel;
-
 public class ExpenseTrackerModel {
 
   // encapsulation - data integrity
@@ -24,6 +20,7 @@ public class ExpenseTrackerModel {
     transactions = new ArrayList<Transaction>();
     matchedFilterIndices = new ArrayList<Integer>();
     listeners = new ArrayList<ExpenseTrackerModelListener>();
+    model = new ExpenseTrackerModel();
 
   }
 
