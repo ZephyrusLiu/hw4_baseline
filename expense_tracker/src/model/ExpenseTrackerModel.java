@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
+/**
+ * This is unfinished javadoc comments.
+ * 
+ * 
+ */
 public class ExpenseTrackerModel {
 
   // encapsulation - data integrity
@@ -12,21 +16,14 @@ public class ExpenseTrackerModel {
   private List<Integer> matchedFilterIndices;
 
   private List<ExpenseTrackerModelListener> listeners;
-  
 
   // This is applying the Observer design pattern.
   // Specifically, this is the Observable class.
 
-  /**
-   * This is unfinished javadoc comments.
-   * 
-   * 
-   */
   public ExpenseTrackerModel() {
     transactions = new ArrayList<Transaction>();
     matchedFilterIndices = new ArrayList<Integer>();
     listeners = new ArrayList<ExpenseTrackerModelListener>();
-
 
   }
 
@@ -131,6 +128,7 @@ public class ExpenseTrackerModel {
     // TODO
     for (ExpenseTrackerModelListener listener : listeners) {
       listener.update(this);
+      System.out.print("State changed.");
     }
   }
 
