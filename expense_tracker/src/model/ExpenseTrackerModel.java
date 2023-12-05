@@ -5,10 +5,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * This is unfinished javadoc comments.
+ * This class represents the model for an Expense Tracker application,
+ * managing a list of transactions and providing functionality for
+ * adding, removing, and observing changes in the transaction data.
  * 
- * 
+ * @author Yujin Qin, Yuqi Liu
+ * @version 1.0
+ * @see Transaction
+ * @see ExpenseTrackerModelListener
  */
+
 public class ExpenseTrackerModel {
 
   // encapsulation - data integrity
@@ -132,11 +138,4 @@ public class ExpenseTrackerModel {
     }
   }
 
-  public List<Transaction> getState() {
-    return transactions;
-  }
-
-  public void setState(Transaction transaction) {
-    transactions.add(transaction);
-  }
 }
