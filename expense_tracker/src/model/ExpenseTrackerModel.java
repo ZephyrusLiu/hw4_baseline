@@ -71,6 +71,7 @@ public class ExpenseTrackerModel {
     // For encapsulation, copy in the input list
     this.matchedFilterIndices.clear();
     this.matchedFilterIndices.addAll(newMatchedFilterIndices);
+    stateChanged();
   }
 
   public List<Integer> getMatchedFilterIndices() {
