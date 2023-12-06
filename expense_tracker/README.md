@@ -1,6 +1,6 @@
 # hw1- Manual Review
 
-The homework will be based on this project named "Expense Tracker",where users will be able to add/remove daily transaction. 
+The homework will be based on this project named "Expense Tracker", where users will be able to add/remove daily transaction. 
 
 ## Compile
 
