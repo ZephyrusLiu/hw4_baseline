@@ -135,7 +135,7 @@ public class ExpenseTrackerModel {
     // TODO
     for (ExpenseTrackerModelListener listener : listeners) {
       listener.update(this);
-      System.out.print("State changed.");
+      System.out.println("State changed.");
     }
   }
 
